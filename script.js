@@ -11,6 +11,7 @@ function createTag(label) {
     span.innerHTML = label;
     const closeBtn = document.createElement('i');
     closeBtn.setAttribute('class', 'material-icons')
+    closeBtn.setAttribute('data-item', label)
     closeBtn.innerHTML = 'close';
 
     div.appendChild(span);
@@ -44,3 +45,11 @@ input.addEventListener('keyup', function(e) {
 })
 
 
+document.addEventListener('click', function(e) {
+    if(e.target.tagName === 'I') {
+        const value = e.target.getAttribute('data-item');
+        const index = tags.indexOf(value);
+        tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
+        addTags();
+    }
+})
