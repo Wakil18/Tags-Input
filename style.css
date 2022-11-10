@@ -1,0 +1,34 @@
+.container {
+    width: 60%;
+    margin: 40px;
+}
+
+.tag-container {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.tag-container .tag {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background: #f2f2f2;
+}
+
+.tag i {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.tag-container input {
+    flex: 1;
+    font-size: 15px;
+    padding: 5px;
+    outline: none;
+    border: 0;
+}
